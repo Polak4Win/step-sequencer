@@ -1,0 +1,606 @@
+/***********************
+How select target 
+
+Example 1:
+Html:
+<div id="test" class="navbar-text">;
+
+Css:
+
+id - #test{ 
+}
+
+class - #navbar-text{ 
+}
+
+Example 2:
+Html:
+<div id="test" class="navbar-text">
+<a><p>test</p></a>
+</div>
+
+Css:
+id - #test a{ 
+}
+(a) is selected
+
+class - #navbar-text p{ 
+}
+
+class - #navbar-text p{ 
+}
+(p) is selected
+***********************/
+
+/*
+Css Property:
+https://www.w3schools.com/css/default.asp
+*/
+
+/**************************************
+Homepage start
+**************************************/
+body{
+  background-color: #dedcdc;
+}
+/************
+Header
+************/
+#header-nav{
+	text-decoration: none;
+  text-align: center;
+	background-color: #383333;
+}
+#nav-start{
+ color: #f7f7f7;
+ margin-right: 0px;
+ padding-left: 5%;
+ font-size: 1.5em;
+ }
+#nav-start:hover { 
+  color: #b8e6c3; 
+}
+#nav-mid{
+ color: #f7f7f7;
+ font-size: 1.5em;
+ margin-right: 4%;
+ text-decoration: none;
+}
+#nav-mid:hover { 
+  color: #b8e6c3; 
+}
+#nav-end {
+ color: #a0dedc;
+ padding-right: 5%;
+ font-style: italic;
+ font-size: 1.5em;
+}
+
+/***********
+Body
+Main content
+************/
+#step-sequencer-body{
+  height:500px ;
+  width: 100%;
+  background-color: #414f45;
+  text-align: center;
+  border-width: 1px;
+  margin-top:20px;
+}
+
+/************
+step-sequencer-body Top
+************/
+
+.tempo-display{
+display: block;
+    width: 50px;
+    height: 50px;
+    margin-top:20px;
+    margin-right: 0px;
+    margin-left: 20px;
+border-style: solid;
+border-color: #1e241f;    
+border-width: 4px; 
+}
+.p-tempo{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+}
+.tempo{
+
+}
+.tempo-slider{
+    width: 150px;
+    height: 50px;
+    margin-top:20px;
+    margin-right: 10px;
+    margin-left: 10px;
+border-style: solid;
+border-color: #1e241f;    
+border-width: 4px;
+
+}
+.play-button{
+display: block;
+    width: 50px;
+    height: 50px;
+    margin-top:20px;
+    margin-right: 0px;
+    margin-left: 20px;
+background-color: #414f45;
+border-style: solid;
+border-color: #1e241f;    
+border-width: 4px; 
+color:#000000;
+}
+.play-icon{
+    width: 14px;
+    height: 14px;
+
+}
+.text-block{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+
+}
+.beatmaker-name{
+display: block;
+    width: 150px;
+    height: 50px;
+    margin-top:20px;
+    margin-right: 0px;
+    margin-left: 55%;
+border-style: solid;
+border-color: #1e241f;    
+border-width: 4px; 
+}
+.beatmaker-p-1{
+text-align: center;
+font-family: Oxanium;
+line-height: 1.2;
+color:#000000;
+}
+
+.beatmaker-s-1 {
+text-align: center;
+font-weight: bold;
+color:#000000;
+}
+.beatmaker-s-1 span{
+text-align: center;
+font-weight: 300;
+color:#000000;
+}
+/************
+all Channelrack
+************/
+.h2 {
+font-family: Oxanium;
+line-height: normal;
+font-weight: bold;
+    width: 100px;
+    height: 40px;
+
+    margin: 10px;
+    display:inline-block; 
+    vertical-align:middle;
+}
+.form-block{
+   display:inline-block;
+    height: 50px;
+    width: 100px; 
+}
+.controls{
+   display:inline-block;
+   margin-top: 10px;
+}
+.grid-space{
+     display:inline-block;
+     margin: 5px; 
+}
+
+/************
+Kick Channelrack
+************/
+#step-sequencer-kick{
+border-style: solid;
+border-color: #4d6956;    
+border-width: 4px; 
+    height: 80px;
+background-color: #4d6956;
+}
+.kick-track {
+display:inline-block;
+    height: 80px;
+    width: 300px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.kick-mute-button{
+  display: inline-block;
+    width: 30px;
+    height: 30px;  
+    margin-left: 5px;
+    margin-right: 5px;
+background-color: #4d6956;
+}
+.img-mute-1 {
+  margin-top: -5px;
+  margin-left: -3px;
+    width: 20px;
+    height: 20px;
+}
+.kick-select{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+margin-left: 20px;
+display:inline-block;
+}
+/************
+Pads Kick
+************/
+.pads-kick-grid{
+  display:inline;
+    width: 70%;
+    height: 70px;
+    background-color: #4d805d;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #4d805d;    
+  border-width: 4px;
+  margin: 10px;
+  margin-left: 20px;
+}
+.pads-kick {
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+      border-style: solid;
+      border-color: #1e241f;    
+      border-width: 4px;
+    background-color: #ceebd7;
+    border-radius: 10px;
+}
+.tap-pads-kick {
+  display:inline;
+      text-align: center;
+    width: 40px;
+    height: 40px;
+}
+/************
+Snare Channelrack
+************/
+#step-sequencer-snare{
+border-style: solid;
+border-color: #4d6956;    
+border-width: 4px; 
+    height: 80px;
+background-color: #4d6956;
+}
+.snare-track {
+display:inline-block;
+    height: 80px;
+    width: 300px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.snare-mute-button{
+  display: inline-block;
+    width: 30px;
+    height: 30px;  
+    margin-left: 5px;
+    margin-right: 5px;
+background-color: #4d6956;
+}
+.img-mute-2 {
+  margin-top: -5px;
+  margin-left: -3px;
+    width: 20px;
+    height: 20px;
+}
+.snare-select{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+margin-left: 20px;
+display:inline-block;
+}
+/************
+Pads Kick
+************/
+.pads-snare-grid{
+  display:inline;
+    width: 70%;
+    height: 70px;
+    background-color: #4d805d;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #4d805d;    
+  border-width: 4px;
+  margin: 10px;
+  margin-left: 20px;
+}
+.grid-space{
+     display:inline-block;
+     margin: 5px; 
+}
+.pads-snare {
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+      border-style: solid;
+      border-color: #1e241f;    
+      border-width: 4px;
+    background-color: #ceebd7;
+    border-radius: 10px;
+}
+.tap-pads-snare {
+  display:inline;
+      text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+/************
+Footer
+************/
+
+.footer {
+  position: fixed;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #453f3f;
+  text-align: center;
+
+}
+.footer .container{
+  color: white;
+  margin-bottom: 20px;
+}
+#footercontainer {
+  margin-top: 12px;
+}
+
+/**************************************
+Homepage end
+**************************************/
+
+
+
+/*Media Queries 
+  If the browser window is smaller, the css will be changed 
+  Example
+  https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+*/
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  /**************************************
+Homepage start
+**************************************/
+/************
+Header
+************/
+
+
+
+/************
+Body
+Main content
+************/
+
+
+/************
+Footer
+************/
+
+
+/**************************************
+Homepage end
+**************************************/
+ 
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+ /**************************************
+Homepage start
+**************************************/
+/************
+Header
+************/
+#header-nav{
+  height: 50px;
+}
+
+#nav-start{
+  font-size: 1.2em;
+  margin-top: -5px;
+}
+#nav-mid{
+  font-size: 1.2em;
+  margin-top: -5px;
+  margin-right: 5%;
+}
+#nav-end {
+  font-size: 1.2em;
+  margin-top: -5px;
+}
+
+
+/************
+Body
+Main content
+************/
+img{
+  height: 250px;
+  width: 80%;
+
+}
+#img-tile{
+  height: 260px;
+  width: 80%;
+}
+
+#map{
+  height: 250px;
+  width: 80%;
+}
+#map-tile{
+  height: 260px;
+  width: 80%;
+}
+
+
+/************
+Footer
+************/
+
+
+/**************************************
+Homepage end
+**************************************/
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+ /**************************************
+Homepage start
+**************************************/
+/************
+Header
+************/
+#nav-start{
+  font-size: 1.1em;
+  margin-top: -5px;
+}
+#nav-mid{
+  font-size: 1.1em;
+  margin-top: -5px;
+}
+#nav-end {
+  font-size: 1.1em;
+  margin-top: -5px;
+}
+
+
+/************
+Body
+Main content
+************/
+img{
+  height: 210px;
+  width: 80%;
+
+}
+#img-tile{
+  height: 220px;
+  width: 80%;
+}
+
+#map{
+  height: 210px;
+  width: 80%;
+}
+#map-tile{
+  height: 220px;
+  width: 80%;
+}
+#img-tile-text {
+  font-size:0.9em;
+}
+
+#map-tile-text {
+  font-size:0.9em;
+}
+
+/************
+Footer
+************/
+.footer {
+  height: 40px;
+}
+#footercontainer {
+  margin-top: 8px;
+}
+
+/**************************************
+Homepage end
+**************************************/
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+ /**************************************
+Homepage start
+**************************************/
+/************
+Header
+************/
+
+
+
+/************
+Body
+Main content
+************/
+
+
+
+/************
+Footer
+************/
+
+
+/**************************************
+Homepage end
+**************************************/
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+ /**************************************
+Homepage start
+**************************************/
+/************
+Header
+************/
+
+
+
+/************
+Body
+Main content
+************/
+
+
+
+/************
+Footer
+************/
+
+
+/**************************************
+Homepage end
+**************************************/
+}

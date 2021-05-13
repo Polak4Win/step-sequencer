@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simplified Site</title><!--name of the site  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css"><!--my css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400&display=swap" rel="stylesheet"><!-- font -->
+  </head>
+<body>
+  <header>  
+      <nav id="header-nav" class="navbar navbar-light justify-content-between">
+          <a id="nav-start" href="index.html" class="navbar-brand">Step Sequencer</a>
+          <a id="nav-mid" href="index.html" class="navbar-text">Reset</a>
+          <a id="nav-end" class="navbar-text">V1.0.0</a>
+      </nav>
+  </header>
+   
+
+    <!--   Beatmaker controls -->
+      <div id="step-sequencer-body" class="container">
+        <div class="row">
+             <div class="tempo-display"> 
+              <p class="p-tempo">90 BPM</p>
+            </div>
+            <div class="tempo">
+              <input type ="range" class="tempo-slider" max="200" min="50" value="90">
+            </div>
+            <button class="play-button">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/play.svg" alt="" class="play-icon">
+                <div class="text-block">Play</div>
+            </button>
+            <div class="beatmaker-name">
+              <p class="beatmaker-p-1"><span class="beatmaker-s-1">Drum Sequencer</span>Lite</p>
+            </div>
+        </div>
+<!-- Kick Sequencer -->
+          <div id="step-sequencer-kick" class="row">
+             <div class="kick-track">
+              <div class="controls">
+                  <h2 class="h2">Kick</h2>  
+                    <button data-track="0" class="kick-mute-button">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute-1">
+                    </button>
+                    <div class="form-block">
+                          <select name="kick-select" id="kick-select">
+                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
+                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
+                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
+                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
+                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
+                          </select>
+                    </div>
+                  </div>
+              </div>
+            <div class="pads-kick-grid">
+                <div class="pads-kick a0">
+                  <div class="tap-pads-kick a0"></div>
+                </div>
+                <div class="pads-kick a1">
+                  <div class="tap-pads-kick a1"></div>
+                </div>
+                <div class="pads-kick a2">
+                  <div class="tap-pads-kick a2"></div>
+                </div>
+                <div class="pads-kick a3">
+                  <div class="tap-pads-kick a3"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-kick a4">
+                  <div class="tap-pads-kick a4"></div>
+                </div>
+                <div class="pads-kick a5">
+                  <div class="tap-pads-kick a5"></div>
+                </div>
+                <div class="pads-kick a6">
+                  <div class="tap-pads-kick a6"></div>
+                </div>
+                <div class="pads-kick a7">
+                  <div class="tap-pads-kick a7"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-kick a8">
+                  <div class="tap-pads-kick a8"></div>
+                </div>
+                <div class="pads-kick a9">
+                  <div class="tap-pads-kick a9"></div>
+                </div>
+                <div class="pads-kick a10">
+                  <div class="tap-pads-kick a10"></div>
+                </div>
+                <div class="pads-kick a11">
+                  <div class="tap-pads-kick a11"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-kick a12">
+                  <div class="tap-pads-kick a12"></div>
+                </div>
+                <div class="pads-kick a13">
+                  <div class="tap-pads-kick a13"></div>
+                </div>
+                <div class="pads-kick a14">
+                  <div class="tap-pads-kick a14"></div>
+                </div>
+                <div class="pads-kick a15">
+                  <div class="tap-pads-kick a15"></div>
+                </div>
+            </div>    
+          </div>
+<!-- Snare Sequencer -->
+         <div id="step-sequencer-snare" class="row">
+             <div class="snare-track">
+              <div class="controls">
+                    <h2 class="h2">Snare</h2>
+                    <button data-track="0" class="snare-mute-button">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute-2">
+                    </button>
+                    <div class="form-block">
+                          <select name="snare-select" id="snare-select">
+                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
+                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
+                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
+                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
+                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option> 
+                          </select>
+                    </div>
+                  </div>
+              </div>
+            <div class="pads-snare-grid">
+                <div class="pads-snare a0">
+                  <div class="tap-pads-snare a0"></div>
+                </div>
+                <div class="pads-snare a1">
+                  <div class="tap-pads-snare a1"></div>
+                </div>
+                <div class="pads-snare a2">
+                  <div class="tap-pads-snare a2"></div>
+                </div>
+                <div class="pads-snare a3">
+                  <div class="tap-pads-snare a3"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a4">
+                  <div class="tap-pads-snare a4"></div>
+                </div>
+                <div class="pads-snare a5">
+                  <div class="tap-pads-snare a5"></div>
+                </div>
+                <div class="pads-snare a6">
+                  <div class="tap-pads-snare a6"></div>
+                </div>
+                <div class="pads-snare a7">
+                  <div class="tap-pads-snare a7"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a8">
+                  <div class="tap-pads-snare a8"></div>
+                </div>
+                <div class="pads-snare a9">
+                  <div class="tap-pads-kick a9"></div>
+                </div>
+                <div class="pads-snare a10">
+                  <div class="tap-pads-snare a10"></div>
+                </div>
+                <div class="pads-snare a11">
+                  <div class="tap-pads-snare a11"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a12">
+                  <div class="tap-pads-snare a12"></div>
+                </div>
+                <div class="pads-snare a13">
+                  <div class="tap-pads-snare a13"></div>
+                </div>
+                <div class="pads-snare a14">
+                  <div class="tap-pads-snare a14"></div>
+                </div>
+                <div class="pads-snare a15">
+                  <div class="tap-pads-snare a15"></div>
+                </div>
+            </div>    
+          </div>
+<!-- hihat Sequencer -->
+         <div id="step-sequencer-snare" class="row">
+             <div class="snare-track">
+              <div class="controls">
+                    <h2 class="h2">Hihats</h2>
+                    <button data-track="0" class="snare-mute-button">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute-2">
+                    </button>
+                    <div class="form-block">
+                          <select name="snare-select" id="snare-select">
+                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
+                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
+                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
+                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
+                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option> 
+                          </select>
+                    </div>
+                  </div>
+              </div>
+            <div class="pads-snare-grid">
+                <div class="pads-snare a0">
+                  <div class="tap-pads-snare a0"></div>
+                </div>
+                <div class="pads-snare a1">
+                  <div class="tap-pads-snare a1"></div>
+                </div>
+                <div class="pads-snare a2">
+                  <div class="tap-pads-snare a2"></div>
+                </div>
+                <div class="pads-snare a3">
+                  <div class="tap-pads-snare a3"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a4">
+                  <div class="tap-pads-snare a4"></div>
+                </div>
+                <div class="pads-snare a5">
+                  <div class="tap-pads-snare a5"></div>
+                </div>
+                <div class="pads-snare a6">
+                  <div class="tap-pads-snare a6"></div>
+                </div>
+                <div class="pads-snare a7">
+                  <div class="tap-pads-snare a7"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a8">
+                  <div class="tap-pads-snare a8"></div>
+                </div>
+                <div class="pads-snare a9">
+                  <div class="tap-pads-kick a9"></div>
+                </div>
+                <div class="pads-snare a10">
+                  <div class="tap-pads-snare a10"></div>
+                </div>
+                <div class="pads-snare a11">
+                  <div class="tap-pads-snare a11"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a12">
+                  <div class="tap-pads-snare a12"></div>
+                </div>
+                <div class="pads-snare a13">
+                  <div class="tap-pads-snare a13"></div>
+                </div>
+                <div class="pads-snare a14">
+                  <div class="tap-pads-snare a14"></div>
+                </div>
+                <div class="pads-snare a15">
+                  <div class="tap-pads-snare a15"></div>
+                </div>
+            </div>    
+          </div>
+<!-- Crash Sequencer -->
+         <div id="step-sequencer-snare" class="row">
+             <div class="snare-track">
+              <div class="controls">
+                    <h2 class="h2">Crash</h2>
+                    <button data-track="0" class="snare-mute-button">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute-2">
+                    </button>
+                    <div class="form-block">
+                          <select name="snare-select" id="snare-select">
+                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
+                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
+                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
+                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
+                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option> 
+                          </select>
+                    </div>
+                  </div>
+              </div>
+            <div class="pads-snare-grid">
+                <div class="pads-snare a0">
+                  <div class="tap-pads-snare a0"></div>
+                </div>
+                <div class="pads-snare a1">
+                  <div class="tap-pads-snare a1"></div>
+                </div>
+                <div class="pads-snare a2">
+                  <div class="tap-pads-snare a2"></div>
+                </div>
+                <div class="pads-snare a3">
+                  <div class="tap-pads-snare a3"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a4">
+                  <div class="tap-pads-snare a4"></div>
+                </div>
+                <div class="pads-snare a5">
+                  <div class="tap-pads-snare a5"></div>
+                </div>
+                <div class="pads-snare a6">
+                  <div class="tap-pads-snare a6"></div>
+                </div>
+                <div class="pads-snare a7">
+                  <div class="tap-pads-snare a7"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a8">
+                  <div class="tap-pads-snare a8"></div>
+                </div>
+                <div class="pads-snare a9">
+                  <div class="tap-pads-kick a9"></div>
+                </div>
+                <div class="pads-snare a10">
+                  <div class="tap-pads-snare a10"></div>
+                </div>
+                <div class="pads-snare a11">
+                  <div class="tap-pads-snare a11"></div>
+                </div>
+              <div class="grid-space"></div>
+                <div class="pads-snare a12">
+                  <div class="tap-pads-snare a12"></div>
+                </div>
+                <div class="pads-snare a13">
+                  <div class="tap-pads-snare a13"></div>
+                </div>
+                <div class="pads-snare a14">
+                  <div class="tap-pads-snare a14"></div>
+                </div>
+                <div class="pads-snare a15">
+                  <div class="tap-pads-snare a15"></div>
+                </div>
+            </div>    
+          </div>
+    <footer class="footer">
+      <div id="footercontainer" class="container">
+        <span class="text-muted">All Rights Reserved</span>
+      </div>
+    </footer>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
