@@ -44,7 +44,7 @@ body{
   background-color: #dedcdc;
 }
 /************
-Header
+header
 ************/
 #header-nav{
 	text-decoration: none;
@@ -77,12 +77,12 @@ Header
 }
 
 /***********
-Body
-Main content
+body
+main content
 ************/
 #step-sequencer-body{
   height:500px ;
-  width: 100%;
+  width: 50%;
   background-color: #414f45;
   text-align: center;
   border-width: 1px;
@@ -90,10 +90,13 @@ Main content
 }
 
 /************
-step-sequencer-body Top
+step-sequencer-body top
 ************/
+#step-sequencer-top{
+margin-bottom: 10px;
+}
 
-.tempo-display{
+.BPM-display{
 display: block;
     width: 50px;
     height: 50px;
@@ -104,16 +107,16 @@ border-style: solid;
 border-color: #1e241f;    
 border-width: 4px; 
 }
-.p-tempo{
+.p-BPM{
 font-family: Oxanium;
 line-height: 1.2;
 font-weight: bold;
 color:#000000;
 }
-.tempo{
+.BPM{
 
 }
-.tempo-slider{
+.BPM-slider{
     width: 150px;
     height: 50px;
     margin-top:20px;
@@ -149,36 +152,36 @@ font-weight: bold;
 color:#000000;
 
 }
-.beatmaker-name{
+.step-sequencer-name{
 display: block;
-    width: 150px;
+    width: 120px;
     height: 50px;
     margin-top:20px;
     margin-right: 0px;
-    margin-left: 55%;
+    margin-left: 53%;
 border-style: solid;
 border-color: #1e241f;    
 border-width: 4px; 
 }
-.beatmaker-p-1{
+.step-sequencer-p-1{
 text-align: center;
 font-family: Oxanium;
 line-height: 1.2;
 color:#000000;
 }
 
-.beatmaker-s-1 {
+.step-sequencer-s-1 {
 text-align: center;
 font-weight: bold;
 color:#000000;
 }
-.beatmaker-s-1 span{
+.step-sequencer-s-1 span{
 text-align: center;
 font-weight: 300;
 color:#000000;
 }
 /************
-all Channelrack
+all channelrack
 ************/
 .h2 {
 font-family: Oxanium;
@@ -202,11 +205,10 @@ font-weight: bold;
 }
 .grid-space{
      display:inline-block;
-     margin: 5px; 
+     margin: 2px; 
 }
-
 /************
-Kick Channelrack
+kick channelrack
 ************/
 #step-sequencer-kick{
 border-style: solid;
@@ -247,15 +249,15 @@ margin-left: 20px;
 display:inline-block;
 }
 /************
-Pads Kick
+pads kick
 ************/
 .pads-kick-grid{
   display:inline;
-    width: 70%;
+    width: 65%;
     height: 70px;
     background-color: #4d805d;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: #4d805d;    
   border-width: 4px;
   margin: 10px;
@@ -263,7 +265,7 @@ Pads Kick
 }
 .pads-kick {
     display:inline-block;
-    width: 40px;
+    width: 30px;
     height: 40px;
     margin-top: 10px;
     text-align: center;
@@ -271,16 +273,25 @@ Pads Kick
       border-color: #1e241f;    
       border-width: 4px;
     background-color: #ceebd7;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .tap-pads-kick {
   display:inline;
       text-align: center;
-    width: 40px;
+    width: 30px;
     height: 40px;
 }
 /************
-Snare Channelrack
+for java script
+************/
+.pads-kick:active{
+  border-color: #d1453b;
+}
+.pads-kick:active{
+background-color: #66ff97;
+}
+/************
+snare channelrack
 ************/
 #step-sequencer-snare{
 border-style: solid;
@@ -321,27 +332,23 @@ margin-left: 20px;
 display:inline-block;
 }
 /************
-Pads Kick
+pads snare
 ************/
 .pads-snare-grid{
   display:inline;
-    width: 70%;
+    width: 65%;
     height: 70px;
     background-color: #4d805d;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: #4d805d;    
   border-width: 4px;
   margin: 10px;
   margin-left: 20px;
 }
-.grid-space{
-     display:inline-block;
-     margin: 5px; 
-}
 .pads-snare {
     display:inline-block;
-    width: 40px;
+    width: 30px;
     height: 40px;
     margin-top: 10px;
     text-align: center;
@@ -349,13 +356,191 @@ Pads Kick
       border-color: #1e241f;    
       border-width: 4px;
     background-color: #ceebd7;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .tap-pads-snare {
   display:inline;
       text-align: center;
-    width: 40px;
+    width: 30px;
     height: 40px;
+}
+/************
+for java script
+************/
+.pads-snare:active{
+  border-color: #d1453b;
+}
+.pads-snare:active{
+background-color: #66ff97;
+}
+
+/************
+hihat channelrack
+************/
+#step-sequencer-hihat{
+border-style: solid;
+border-color: #4d6956;    
+border-width: 4px; 
+    height: 80px;
+background-color: #4d6956;
+}
+.hihat-track {
+display:inline-block;
+    height: 80px;
+    width: 300px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.hihat-mute-button{
+  display: inline-block;
+    width: 30px;
+    height: 30px;  
+    margin-left: 5px;
+    margin-right: 5px;
+background-color: #4d6956;
+}
+.img-mute-3 {
+  margin-top: -5px;
+  margin-left: -3px;
+    width: 20px;
+    height: 20px;
+}
+.hihat-select{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+margin-left: 20px;
+display:inline-block;
+}
+/************
+pads hihat
+************/
+.pads-hihat-grid{
+  display:inline;
+    width: 65%;
+    height: 70px;
+    background-color: #4d805d;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #4d805d;    
+  border-width: 4px;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.pads-hihat {
+    display:inline-block;
+    width: 30px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+      border-style: solid;
+      border-color: #1e241f;    
+      border-width: 4px;
+    background-color: #ceebd7;
+    border-radius: 8px;
+}
+.tap-pads-hihat {
+  display:inline;
+      text-align: center;
+    width: 30px;
+    height: 40px;
+}
+/************
+for java script
+************/
+.pads-hihat:active{
+  border-color: #d1453b;
+}
+.pads-hihat:active{
+background-color: #66ff97;
+}
+/************
+crash channelrack
+************/
+#step-sequencer-crash{
+border-style: solid;
+border-color: #4d6956;    
+border-width: 4px; 
+    height: 100px;
+background-color: #4d6956;
+}
+.crash-track {
+display:inline-block;
+    height: 80px;
+    width: 300px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.crash-mute-button{
+  display: inline-block;
+    width: 30px;
+    height: 30px;  
+    margin-left: 5px;
+    margin-right: 5px;
+background-color: #4d6956;
+}
+.img-mute-4 {
+  margin-top: -5px;
+  margin-left: -3px;
+    width: 20px;
+    height: 20px;
+}
+.crash-select{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+color:#000000;
+margin-left: 20px;
+display:inline-block;
+}
+/************
+pads crash
+************/
+.pads-crash-grid{
+  display:inline;
+    width: 65%;
+    height: 70px;
+    background-color: #4d805d;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #4d805d;    
+  border-width: 4px;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.pads-crash {
+    display:inline-block;
+    width: 30px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+      border-style: solid;
+      border-color: #1e241f;    
+      border-width: 4px;
+    background-color: #ceebd7;
+    border-radius: 8px;
+}
+.tap-pads-crash {
+  display:inline;
+      text-align: center;
+    width: 30px;
+    height: 40px;
+}
+/************
+for java script
+************/
+.pads-crash:active{
+  border-color: #d1453b;
+}
+.pads-crash:active{
+background-color: #66ff97;
 }
 
 /************
