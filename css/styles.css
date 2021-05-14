@@ -1,41 +1,3 @@
-/***********************
-How select target 
-
-Example 1:
-Html:
-<div id="test" class="navbar-text">;
-
-Css:
-
-id - #test{ 
-}
-
-class - #navbar-text{ 
-}
-
-Example 2:
-Html:
-<div id="test" class="navbar-text">
-<a><p>test</p></a>
-</div>
-
-Css:
-id - #test a{ 
-}
-(a) is selected
-
-class - #navbar-text p{ 
-}
-
-class - #navbar-text p{ 
-}
-(p) is selected
-***********************/
-
-/*
-Css Property:
-https://www.w3schools.com/css/default.asp
-*/
 
 /**************************************
 Homepage start
@@ -181,366 +143,120 @@ font-weight: 300;
 color:#000000;
 }
 /************
-all channelrack
+control for all grids
 ************/
+
+
+
+/************
+channel
+************/
+#step-sequencer{
+height: 80px;
+background-color: #395943;
+}
+.step-sequencer-row {
+display:inline-block;
+    height: 80px;
+    width: 300px;
+    margin-bottom:10px;
+
+}
+.controls{
+   display:inline-block;
+   margin-top: 10px;
+
+}
 .h2 {
 font-family: Oxanium;
 line-height: normal;
 font-weight: bold;
     width: 100px;
     height: 40px;
-
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: -20px;
     display:inline-block; 
     vertical-align:middle;
 }
+.mute-button{
+display: inline-block;
+background-color: #4d6956;
+border-radius: 20px; 
+margin-left: -10px;   
+width: 30px;
+height: 30px;
+}
+.mute-button:active{ /**for script **/
+background-color: #daf7e3;  
+}
+.img-mute{
+margin-top: -5px;
+margin-left: -2px;
+width: 18px;
+height: 18px;
+}
 .form-block{
-   display:inline-block;
-    height: 50px;
-    width: 100px; 
+display:inline-block;
+font-family: Oxanium;
+color: #4d6956;
+height: 50px;
+width: 100px; 
 }
-.controls{
-   display:inline-block;
-   margin-top: 10px;
+select{
+background-color: #4d6956;
+
 }
-.grid-space{
+#change{
+font-family: Oxanium;
+line-height: 1.2;
+font-weight: bold;
+background-color: #4d6956;
+color:#000000;
+margin-left: 20px;
+display:inline-block;
+}
+/********************
+pad grid/pad/tap-pad
+********************/
+.pad-grid{
+  display:inline;
+  width: 65%;
+  height: 60px;
+  background-color: #4d805d;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #4d805d;    
+  border-width: 4px;
+  margin: 10px;
+  margin-left: 20px;
+}
+.pad{
+    display:inline-block;
+    width: 30px;
+    height: 40px;
+    margin-top: 5px;
+    text-align: center;
+      border-style: solid;
+      border-color: #1e241f;    
+      border-width: 4px;
+    background-color: #ceebd7;
+    border-radius: 8px;
+}
+.pad:hover{           /**for script **/
+border-color: #748c78;  
+}
+.pad:hover{           /**for script **/
+background-color: #1e3023;  
+}
+.tap-pad{
+  display:inline;
+      text-align: center;
+    width: 30px;
+    height: 40px;
+}
+.space-grid{
      display:inline-block;
      margin: 2px; 
-}
-/************
-kick channelrack
-************/
-#step-sequencer-kick{
-border-style: solid;
-border-color: #4d6956;    
-border-width: 4px; 
-    height: 80px;
-background-color: #4d6956;
-}
-.kick-track {
-display:inline-block;
-    height: 80px;
-    width: 300px;
-    margin-top:10px;
-    margin-bottom:10px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-.kick-mute-button{
-  display: inline-block;
-    width: 30px;
-    height: 30px;  
-    margin-left: 5px;
-    margin-right: 5px;
-background-color: #4d6956;
-}
-.img-mute-1 {
-  margin-top: -5px;
-  margin-left: -3px;
-    width: 20px;
-    height: 20px;
-}
-.kick-select{
-font-family: Oxanium;
-line-height: 1.2;
-font-weight: bold;
-color:#000000;
-margin-left: 20px;
-display:inline-block;
-}
-/************
-pads kick
-************/
-.pads-kick-grid{
-  display:inline;
-    width: 65%;
-    height: 70px;
-    background-color: #4d805d;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #4d805d;    
-  border-width: 4px;
-  margin: 10px;
-  margin-left: 20px;
-}
-.pads-kick {
-    display:inline-block;
-    width: 30px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-      border-style: solid;
-      border-color: #1e241f;    
-      border-width: 4px;
-    background-color: #ceebd7;
-    border-radius: 8px;
-}
-.tap-pads-kick {
-  display:inline;
-      text-align: center;
-    width: 30px;
-    height: 40px;
-}
-/************
-for java script
-************/
-.pads-kick:active{
-  border-color: #d1453b;
-}
-.pads-kick:active{
-background-color: #66ff97;
-}
-/************
-snare channelrack
-************/
-#step-sequencer-snare{
-border-style: solid;
-border-color: #4d6956;    
-border-width: 4px; 
-    height: 80px;
-background-color: #4d6956;
-}
-.snare-track {
-display:inline-block;
-    height: 80px;
-    width: 300px;
-    margin-top:10px;
-    margin-bottom:10px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-.snare-mute-button{
-  display: inline-block;
-    width: 30px;
-    height: 30px;  
-    margin-left: 5px;
-    margin-right: 5px;
-background-color: #4d6956;
-}
-.img-mute-2 {
-  margin-top: -5px;
-  margin-left: -3px;
-    width: 20px;
-    height: 20px;
-}
-.snare-select{
-font-family: Oxanium;
-line-height: 1.2;
-font-weight: bold;
-color:#000000;
-margin-left: 20px;
-display:inline-block;
-}
-/************
-pads snare
-************/
-.pads-snare-grid{
-  display:inline;
-    width: 65%;
-    height: 70px;
-    background-color: #4d805d;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #4d805d;    
-  border-width: 4px;
-  margin: 10px;
-  margin-left: 20px;
-}
-.pads-snare {
-    display:inline-block;
-    width: 30px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-      border-style: solid;
-      border-color: #1e241f;    
-      border-width: 4px;
-    background-color: #ceebd7;
-    border-radius: 8px;
-}
-.tap-pads-snare {
-  display:inline;
-      text-align: center;
-    width: 30px;
-    height: 40px;
-}
-/************
-for java script
-************/
-.pads-snare:active{
-  border-color: #d1453b;
-}
-.pads-snare:active{
-background-color: #66ff97;
-}
-
-/************
-hihat channelrack
-************/
-#step-sequencer-hihat{
-border-style: solid;
-border-color: #4d6956;    
-border-width: 4px; 
-    height: 80px;
-background-color: #4d6956;
-}
-.hihat-track {
-display:inline-block;
-    height: 80px;
-    width: 300px;
-    margin-top:10px;
-    margin-bottom:10px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-.hihat-mute-button{
-  display: inline-block;
-    width: 30px;
-    height: 30px;  
-    margin-left: 5px;
-    margin-right: 5px;
-background-color: #4d6956;
-}
-.img-mute-3 {
-  margin-top: -5px;
-  margin-left: -3px;
-    width: 20px;
-    height: 20px;
-}
-.hihat-select{
-font-family: Oxanium;
-line-height: 1.2;
-font-weight: bold;
-color:#000000;
-margin-left: 20px;
-display:inline-block;
-}
-/************
-pads hihat
-************/
-.pads-hihat-grid{
-  display:inline;
-    width: 65%;
-    height: 70px;
-    background-color: #4d805d;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #4d805d;    
-  border-width: 4px;
-  margin: 10px;
-  margin-left: 20px;
-}
-
-.pads-hihat {
-    display:inline-block;
-    width: 30px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-      border-style: solid;
-      border-color: #1e241f;    
-      border-width: 4px;
-    background-color: #ceebd7;
-    border-radius: 8px;
-}
-.tap-pads-hihat {
-  display:inline;
-      text-align: center;
-    width: 30px;
-    height: 40px;
-}
-/************
-for java script
-************/
-.pads-hihat:active{
-  border-color: #d1453b;
-}
-.pads-hihat:active{
-background-color: #66ff97;
-}
-/************
-crash channelrack
-************/
-#step-sequencer-crash{
-border-style: solid;
-border-color: #4d6956;    
-border-width: 4px; 
-    height: 100px;
-background-color: #4d6956;
-}
-.crash-track {
-display:inline-block;
-    height: 80px;
-    width: 300px;
-    margin-top:10px;
-    margin-bottom:10px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-.crash-mute-button{
-  display: inline-block;
-    width: 30px;
-    height: 30px;  
-    margin-left: 5px;
-    margin-right: 5px;
-background-color: #4d6956;
-}
-.img-mute-4 {
-  margin-top: -5px;
-  margin-left: -3px;
-    width: 20px;
-    height: 20px;
-}
-.crash-select{
-font-family: Oxanium;
-line-height: 1.2;
-font-weight: bold;
-color:#000000;
-margin-left: 20px;
-display:inline-block;
-}
-/************
-pads crash
-************/
-.pads-crash-grid{
-  display:inline;
-    width: 65%;
-    height: 70px;
-    background-color: #4d805d;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #4d805d;    
-  border-width: 4px;
-  margin: 10px;
-  margin-left: 20px;
-}
-
-.pads-crash {
-    display:inline-block;
-    width: 30px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-      border-style: solid;
-      border-color: #1e241f;    
-      border-width: 4px;
-    background-color: #ceebd7;
-    border-radius: 8px;
-}
-.tap-pads-crash {
-  display:inline;
-      text-align: center;
-    width: 30px;
-    height: 40px;
-}
-/************
-for java script
-************/
-.pads-crash:active{
-  border-color: #d1453b;
-}
-.pads-crash:active{
-background-color: #66ff97;
 }
 
 /************
