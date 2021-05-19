@@ -44,7 +44,7 @@ main content
 ************/
 #step-sequencer-body{
   height:500px ;
-  width: 50%;
+  min-width: 960px;;
   background-color: #414f45;
   text-align: center;
   border-width: 1px;
