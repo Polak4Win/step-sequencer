@@ -75,7 +75,7 @@ line-height: 1.2;
 font-weight: bold;
 color:#000000;
 }
-.BPM{
+.BPM-clock{
 
 }
 .BPM-slider{
@@ -177,6 +177,7 @@ font-weight: bold;
     margin-left: -20px;
     display:inline-block; 
     vertical-align:middle;
+    text-align: left;
 }
 .mute-button{
 display: inline-block;
@@ -207,13 +208,18 @@ background-color: #4d6956;
 
 }
 #change{
+
+height: 40px;
+width: 100px;
 font-family: Oxanium;
 line-height: 1.2;
 font-weight: bold;
 background-color: #4d6956;
 color:#000000;
 margin-left: 20px;
-display:inline-block;
+display:inline;
+background-color: #4d6956;
+border-radius: 2px;
 }
 /********************
 pad grid/pad/tap-pad
@@ -309,7 +315,11 @@ Header
 Body
 Main content
 ************/
+.step-sequencer-name{
+    margin-left: 45%;
 
+ 
+}
 
 /************
 Footer
@@ -448,7 +458,6 @@ Footer
 /**************************************
 Homepage end
 **************************************/
-}
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
@@ -476,7 +485,7 @@ Footer
 /**************************************
 Homepage end
 **************************************/
-}
+
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
