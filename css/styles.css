@@ -4,6 +4,7 @@ Homepage start
 **************************************/
 body{
   background-color: #dedcdc;
+  min-width: 960px;
 }
 /************
 header
@@ -47,6 +48,7 @@ main content
   width: 50%; 
   min-width: 960px;
   margin-right: auto;
+  margin-left: auto;
   background-color: #414f45;
   text-align: center;
   border-width: 1px;
@@ -104,6 +106,9 @@ border-color: #1e241f;
 border-width: 4px; 
 color:#000000;
 }
+.play-button.active{
+  background-color: #00ff49;
+}
 .play-icon{
     width: 14px;
     height: 14px;
@@ -121,8 +126,8 @@ display: block;
     width: 120px;
     height: 50px;
     margin-top:20px;
-    margin-right: 0px;
-    margin-left: 53%;
+    margin-right: 30px;
+    margin-left: auto;
 border-style: solid;
 border-color: #1e241f;    
 border-width: 4px; 
@@ -156,6 +161,8 @@ channel
 #step-sequencer{
 height: 80px;
 background-color: #395943;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .step-sequencer-row {
 display:inline-block;
@@ -212,7 +219,7 @@ background-color: #4d6956;
 #change{
 
 height: 40px;
-width: 100px;
+width: 120px;
 font-family: Oxanium;
 line-height: 1.2;
 font-weight: bold;
@@ -250,11 +257,11 @@ pad grid/pad/tap-pad
     background-color: #ceebd7;
     border-radius: 8px;
 }
-.pad:hover{           /**for script **/
-border-color: #748c78;  
-}
-.pad:hover{           /**for script **/
+.pad.active{
 background-color: #1e3023;  
+}
+.playing{
+  border-color: #28a745;
 }
 .tap-pad{
   display:inline;
@@ -264,7 +271,7 @@ background-color: #1e3023;
 }
 .space-grid{
      display:inline-block;
-     margin: 10px;
+     margin: 5px;
      margin-bottom: 5px;
      margin-top: 5px;  
 }
@@ -320,7 +327,6 @@ Body
 Main content
 ************/
 .step-sequencer-name{
-    margin-left: 45%;
 
  
 }

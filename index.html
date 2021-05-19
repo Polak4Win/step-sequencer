@@ -19,18 +19,21 @@
       </nav>
   </header>
 <!--   audiofiles -->
-      <audio class="kick-audio"  src="\audio\kick\Kick Boom-Bap.wav"></audio>
-      <audio class="snare-audio" src="\audio\snare-clap\FTDK Snare 1.wav"></audio>
-      <audio class="hihat-audio" src="\audio\cymbals\FTDK Hat 10.wav"></audio>
+      <audio class="kick-audio"  src=".\audio\kick\Kick Boom-Bap.wav"></audio>
+      <audio class="snare-audio" src=".\audio\snare-clap\FTDK Snare 1.wav"></audio>
+      <audio class="hihat-audio" src=".\audio\cymbals\FTDK Hat 10.wav"></audio>
+      <audio class="loop-audio" src=".\audio\loops\bass-bpm84-1.wav"></audio>
 
 <!--   step-sequencer controls -->
       <div id="step-sequencer-body" >
+        
+
         <div id="step-sequencer-top" class="row">
              <div class="BPM-display"> 
-              <p class="p-BPM">90 BPM</p>
+              <p class="p-BPM">84 BPM</p>
             </div>
             <div class="BPM-clock">
-              <input type ="range" class="BPM-slider" max="180" min="50" value="90">
+              <input type ="range" class="BPM-slider" max="180" min="50" value="84">
             </div>
             <button class="play-button">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/play.svg" alt="" class="play-icon">
@@ -49,12 +52,12 @@
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute 1">
                     </button>
                     <div class="form-block">
-                          <select name="change kick" id="change">
-                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
-                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
-                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
-                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
-                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
+                          <select name="kick" id="change">
+                            <option value=".\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
+                            <option value=".\audio\kick\Kick Hit me.wav">Hit me </option>
+                            <option value=".\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
+                            <option value=".\audio\kick\Kick Star 1.wav">Kick Star </option>
+                            <option value=".\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
                           </select>
                     </div>
                   </div>
@@ -113,7 +116,7 @@
                 </div>
             </div>          
           </div>
-<!-- Sequencer -->
+<!-- Sequencer Snare -->
           <div id="step-sequencer" class="row">
              <div class="step-sequencer-row">
               <div class="controls">
@@ -122,13 +125,11 @@
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute 1">
                     </button>
                     <div class="form-block">
-                          <select name="change snare" id="change">
-                            <option value="\audio\snare-clap\FTDK Snare 1.wav">Snare 1</option>
-  <!--                      <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
-                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
-                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
-                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
-  -->
+                          <select name="snare" id="change">
+                            <option value=".\audio\snare-clap\FTDK Snare 1.wav">Snare 1</option>
+                            <option value=".\audio\snare-clap\FTDK Snare 16.wav">Snare 2</option>
+                            <option value=".\audio\snare-clap\FTDK Snare 19.wav">Snare 3</option>
+                            <option value=".\audio\snare-clap\FTDK Snare 22.wav">Snare 4</option>  
                           </select>
                     </div>
                   </div>
@@ -187,76 +188,76 @@
                 </div>
             </div>          
           </div>
-<!-- Sequencer -->
+<!-- Sequencer Hihat -->
           <div id="step-sequencer" class="row">
              <div class="step-sequencer-row">
               <div class="controls">
                   <h2 class="h2">Hihat</h2>  
-                    <button data-track="0" class="mute-button kick">
+                    <button data-track="0" class="mute-button hihat">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute 1">
                     </button>
                     <div class="form-block">
-                          <select name="change kick" id="change">
-                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
-                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
-                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
-                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
-                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
+                          <select name="hihat" id="change">
+                            <option value=".\audio\cymbals\FTDK Hat 10.wav">Hat 1</option>
+                            <option value=".\audio\cymbals\FTDK Hat 11.wav">Hat 2</option>
+                            <option value=".\audio\cymbals\FTDK Hat 12.wav">Hat 3</option>
+                            <option value=".\audio\cymbals\FTDK Hat 13.wav">Hat 4</option>
+                            <option value=".\audio\cymbals\FTDK Hat 14.wav">Hat 5</option>  
                           </select>
                     </div>
                   </div>
               </div>
              <div class="pad-grid">
-                <div class="pad kick a0">
-                  <div class="tap-pads kick a0"></div>
+                <div class="pad hihat a0">
+                  <div class="tap-pads hihat a0"></div>
                 </div>
-                <div class="pad kick a1">
-                  <div class="tap-pads kick a1"></div>
+                <div class="pad hihat a1">
+                  <div class="tap-pads hihat a1"></div>
                 </div>
-                <div class="pad kick a2">
-                  <div class="tap-pads kick a2"></div>
+                <div class="pad hihat a2">
+                  <div class="tap-pads hihat a2"></div>
                 </div>
-                <div class="pad kick a3">
-                  <div class="tap-pads kick a3"></div>
-                </div>
-          <div class="space-grid"></div>
-                <div class="pad kick a4">
-                  <div class="tap-pads kick a4"></div>
-                </div>
-                <div class="pad kick a5">
-                  <div class="tap-pads kick a5"></div>
-                </div>
-                <div class="pad kick a6">
-                  <div class="tap-pads kick a6"></div>
-                </div>
-                <div class="pad kick a7">
-                  <div class="tap-pads kick a7"></div>
+                <div class="pad hihat a3">
+                  <div class="tap-pads hihat a3"></div>
                 </div>
           <div class="space-grid"></div>
-                <div class="pad kick a8">
-                  <div class="tap-pads kick a8"></div>
+                <div class="pad hihat a4">
+                  <div class="tap-pads hihat a4"></div>
                 </div>
-                <div class="pad kick a9">
-                  <div class="tap-pads kick a9"></div>
+                <div class="pad hihat a5">
+                  <div class="tap-pads hihat a5"></div>
                 </div>
-                <div class="pad kick a10">
-                  <div class="tap-pads kick a10"></div>
+                <div class="pad hihat a6">
+                  <div class="tap-pads hihat a6"></div>
                 </div>
-                <div class="pad kick a11">
-                  <div class="tap-pads kick a11"></div>
+                <div class="pad hihat a7">
+                  <div class="tap-pads hihat a7"></div>
                 </div>
           <div class="space-grid"></div>
-                <div class="pad kick a12">
-                  <div class="tap-pads kick a12"></div>
+                <div class="pad hihat a8">
+                  <div class="tap-pads hihat a8"></div>
                 </div>
-                <div class="pad kick a13">
-                  <div class="tap-pads kick a13"></div>
+                <div class="pad hihat a9">
+                  <div class="tap-pads hihat a9"></div>
                 </div>
-                <div class="pad kick a14">
-                  <div class="tap-pads kick a14"></div>
+                <div class="pad hihat a10">
+                  <div class="tap-pads hihat a10"></div>
                 </div>
-                <div class="pad kick a15">
-                  <div class="tap-pads kick a15"></div>
+                <div class="pad hihat a11">
+                  <div class="tap-pads hihat a11"></div>
+                </div>
+          <div class="space-grid"></div>
+                <div class="pad hihat a12">
+                  <div class="tap-pads hihat a12"></div>
+                </div>
+                <div class="pad hihat a13">
+                  <div class="tap-pads hihat a13"></div>
+                </div>
+                <div class="pad hihat a14">
+                  <div class="tap-pads hihat a14"></div>
+                </div>
+                <div class="pad hihat a15">
+                  <div class="tap-pads hihat a15"></div>
                 </div>
             </div>          
           </div>
@@ -269,67 +270,67 @@
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1718917/mute-2.svg" alt="" class="img-mute 1">
                     </button>
                     <div class="form-block">
-                          <select name="change kick" id="change">
-                            <option value="\audio\kick\Kick Boom-Bap.wav">Boom-Bap </option>
-                            <option value="\audio\kick\Kick Hit me.wav">Hit me </option>
-                            <option value="\audio\kick\Kick Perc Trash.wav">Perc Trash </option>
-                            <option value="\audio\kick\Kick Star 1.wav">Kick Star </option>
-                            <option value="\audio\kick\Kick Trash Bag.wav">Trash Bag </option>  
+                          <select name="loop" id="change">
+                            <option value=".\audio\loops\bass-bpm84-1.wav">Loop Bass 1 84 BPM</option>
+                            <option value=".\audio\loops\bass-bpm84-2.wav">Loop Bass 2 84 BPM</option>
+                            <option value=".\audio\loops\chords-bpm-84-1.wav">Loop Chord 84 BPM</option>
+                            <option value=".\audio\loops\lead-bpm-84-3.wav">Loop lead 1 84 BPM</option>
+                            <option value=".\audio\loops\lead-bpm-84-6.wav">Loop lead 2 84 BPM</option>  
                           </select>
                     </div>
                   </div>
               </div>
              <div class="pad-grid">
-                <div class="pad kick a0">
-                  <div class="tap-pads kick a0"></div>
+                <div class="pad loop a0">
+                  <div class="tap-pads loop a0"></div>
                 </div>
-                <div class="pad kick a1">
-                  <div class="tap-pads kick a1"></div>
+                <div class="pad loop a1">
+                  <div class="tap-pads loop a1"></div>
                 </div>
-                <div class="pad kick a2">
-                  <div class="tap-pads kick a2"></div>
+                <div class="pad loop a2">
+                  <div class="tap-pads loop a2"></div>
                 </div>
-                <div class="pad kick a3">
-                  <div class="tap-pads kick a3"></div>
-                </div>
-          <div class="space-grid"></div>
-                <div class="pad kick a4">
-                  <div class="tap-pads kick a4"></div>
-                </div>
-                <div class="pad kick a5">
-                  <div class="tap-pads kick a5"></div>
-                </div>
-                <div class="pad kick a6">
-                  <div class="tap-pads kick a6"></div>
-                </div>
-                <div class="pad kick a7">
-                  <div class="tap-pads kick a7"></div>
+                <div class="pad loop a3">
+                  <div class="tap-pads loop a3"></div>
                 </div>
           <div class="space-grid"></div>
-                <div class="pad kick a8">
-                  <div class="tap-pads kick a8"></div>
+                <div class="pad loop a4">
+                  <div class="tap-pads loop a4"></div>
                 </div>
-                <div class="pad kick a9">
-                  <div class="tap-pads kick a9"></div>
+                <div class="pad loop a5">
+                  <div class="tap-pads loop a5"></div>
                 </div>
-                <div class="pad kick a10">
-                  <div class="tap-pads kick a10"></div>
+                <div class="pad loop a6">
+                  <div class="tap-pads loop a6"></div>
                 </div>
-                <div class="pad kick a11">
-                  <div class="tap-pads kick a11"></div>
+                <div class="pad loop a7">
+                  <div class="tap-pads loop a7"></div>
                 </div>
           <div class="space-grid"></div>
-                <div class="pad kick a12">
-                  <div class="tap-pads kick a12"></div>
+                <div class="pad loop a8">
+                  <div class="tap-pads loop a8"></div>
                 </div>
-                <div class="pad kick a13">
-                  <div class="tap-pads kick a13"></div>
+                <div class="pad loop a9">
+                  <div class="tap-pads loop a9"></div>
                 </div>
-                <div class="pad kick a14">
-                  <div class="tap-pads kick a14"></div>
+                <div class="pad loop a10">
+                  <div class="tap-pads loop a10"></div>
                 </div>
-                <div class="pad kick a15">
-                  <div class="tap-pads kick a15"></div>
+                <div class="pad loop a11">
+                  <div class="tap-pads loop a11"></div>
+                </div>
+          <div class="space-grid"></div>
+                <div class="pad loop a12">
+                  <div class="tap-pads loop a12"></div>
+                </div>
+                <div class="pad loop a13">
+                  <div class="tap-pads loop a13"></div>
+                </div>
+                <div class="pad loop a14">
+                  <div class="tap-pads loop a14"></div>
+                </div>
+                <div class="pad loop a15">
+                  <div class="tap-pads loop a15"></div>
                 </div>
             </div>          
           </div>
@@ -338,6 +339,9 @@
         <span class="text-muted">All Rights Reserved</span>
       </div>
     </footer>
+    <script src="js/script.js"></script>
+      
+    
 
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
