@@ -81,6 +81,7 @@ class drumKit {
         if(!this.isPlaying){
             btntext.innerText = "Play";
             this.playBtn.classList.remove("active");
+
         } else {
             btntext.innerText = "Stop";
             this.playBtn.classList.add("active");
@@ -113,8 +114,7 @@ class drumKit {
     mute(e){
         const muteIndex = e.target.getAttribute("data-track");
         e.target.classList.toggle("active");
-        console.log(muteIndex);
-        if(e.target.classList.contains('active')){
+        if(e.target.classList.contains("active")){
             switch(muteIndex){
                 case "0":
                     this.kickAudio.volume = 0;
@@ -125,7 +125,12 @@ class drumKit {
                 case "2":
                     this.hihatAudio.volume = 0;
                     break;
+                case "3":
+                    this.loopAudio.volume = 0;
+                    break;
+
             }
+            console.log(muteIndex);
         }else{
             switch(muteIndex){
                 case "0":
@@ -137,9 +142,11 @@ class drumKit {
                 case "2":
                     this.hihatAudio.volume = 1;
                     break;
+                case "3":
+                    this.loopAudio.volume = 1;
+                    break;
             }
         }
-
     }
 
     changeTempo(e){
@@ -159,7 +166,6 @@ class drumKit {
 
 }
 
-
 //event Listeners
 
 
@@ -173,6 +179,7 @@ drumkit.playBtn.addEventListener("click",()=>{
     drumkit.start();
     drumkit.updatebtn();
 })
+
 
 drumkit.selects.forEach(select => {
     select.addEventListener("change",function(e){
@@ -197,3 +204,4 @@ drumkit.tempoSlider.addEventListener("change",function(){
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
+
